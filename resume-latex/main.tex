@@ -1,283 +1,195 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[letterpaper,11pt]{article}
 
-% ---------- PACKAGES ----------
-\usepackage[a4paper,margin=0.55in]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage{enumitem}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage{xcolor}
-\usepackage{hyperref}
-\usepackage{fontawesome5}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{microtype}
+\usepackage{fontawesome5}
+\usepackage{mathptmx}
+\input{glyphtounicode}
 
-% ---------- COLORS ----------
-\definecolor{navy}{HTML}{17365D}
-\definecolor{blue}{HTML}{1769AA}
-\definecolor{gray}{HTML}{444444}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
-% ---------- HYPERLINK SETTINGS ----------
-\hypersetup{
-    colorlinks=true,
-    urlcolor=blue,
-    linkcolor=navy
-}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
 \urlstyle{same}
-\pagestyle{empty}
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{2pt}
-\setlength{\tabcolsep}{0pt}
 \raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
 
-% ---------- SECTION STYLE ----------
-\titleformat{\section}
-  {\large\bfseries\color{navy}}
-  {}{0em}{}[\color{navy}\titlerule]
+\titleformat{\section}{
+  \vspace{-4pt}\color{black}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-\titlespacing*{\section}{0pt}{7pt}{4pt}
+\pdfgentounicode=1
 
-\setlist[itemize]{
-    leftmargin=15pt,
-    itemsep=1.5pt,
-    topsep=2pt,
-    parsep=0pt
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textbf{\small #2}\\
+    \textit{\small #3} & \textit{\small #4}\\
+  \end{tabular*}\vspace{-7pt}
 }
-
-% ---------- CUSTOM COMMANDS ----------
-\newcommand{\resumeItem}[1]{\item #1}
-
-\newcommand{\project}[3]{
-    \textbf{#1}
-    \hfill
-    {\small\textit{#2}}\\[-2pt]
-    #3
-    \vspace{3pt}
+\newcommand{\resumeProject}[3]{
+  \vspace{-1pt}\item \href{#1}{\textbf{\underline{#2}}} \hfill \small\textit{#3}\vspace{-2pt}
 }
-
-\newcommand{\education}[4]{
-    \textbf{#1}\hfill{\small #2}\\
-    #3\hfill{\small #4}\\[-2pt]
-}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in,label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.18in,noitemsep,topsep=2pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
 
 \begin{document}
 
-% ==================================================
-% HEADER
-% ==================================================
-
+%----------- HEADER -----------
 \begin{center}
-    {\LARGE\bfseries\color{navy} DARSHAN MATHAPATI}\\[3pt]
-    {\large\bfseries Embedded Engineer}\\[7pt]
-
-    \small
-    \faPhone\ \href{tel:+918660768219}{+91-8660768219}
-    \quad
-    \faEnvelope\
-    \href{mailto:mathapatiappayya88@gmail.com}
-    {mathapatiappayya88@gmail.com}
-    \\[5pt]
-
-    % Replace the LinkedIn and GitHub URLs below
-    % with your actual profile links.
-    \faLinkedin\
-    \href{https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME/}
-    {LinkedIn}
-    \quad
-    \faGithub\
-    \href{https://github.com/YOUR-GITHUB-USERNAME}
-    {GitHub}
-    \quad
-    \faGraduationCap\ IEEE Student Member
+{\fontsize{18}{20}\selectfont \scshape Darshan Mathapati}\\[4pt]
+{\large \textbf{Embedded Engineer}}\\[4pt]
+\small
+\faPhone\ +91-8660768219 \hspace{0.6cm}
+\faEnvelope\ \href{mailto:mathapatiappayya88@gmail.com}{mathapatiappayya88@gmail.com} \hspace{0.6cm}
+\faLinkedin\ \href{https://www.linkedin.com/in/darshan-mathapati-0384792a6}{LinkedIn} \hspace{0.6cm}
+\faGithub\ \href{https://github.com/mathapatiappayya88-dm}{GitHub} \hspace{0.6cm}
+\faUsers\ IEEE Student Member
 \end{center}
+\vspace{-6pt}
 
-\vspace{-5pt}
-
-% ==================================================
-% CAREER OBJECTIVE
-% ==================================================
-
+%----------- OBJECTIVE -----------
 \section{Career Objective}
+\small{
+Electronics and Communication Engineering student with hands-on experience in embedded systems and IoT using ESP32, Raspberry Pi, and Arduino UNO. Skilled in sensor interfacing, cloud-connected monitoring, and hardware prototyping. Seeking an embedded engineering opportunity to build practical, real-world solutions while continuing to learn.
+}
+\vspace{-6pt}
 
-Electronics and Communication Engineering student with
-hands-on experience in embedded systems and IoT using ESP32,
-Raspberry Pi, and Arduino UNO. Skilled in sensor interfacing,
-cloud-connected monitoring, and hardware prototyping.
-Seeking an embedded engineering opportunity to build practical,
-real-world solutions while continuing to learn.
-
-% ==================================================
-% EDUCATION
-% ==================================================
-
+%----------- EDUCATION -----------
 \section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{East Point College of Engineering and Technology}{2023 -- 2027}
+{B.E. in Electronics and Communication Engineering -- 7.8 CGPA}{Bangalore, Karnataka}
+\resumeSubheading
+{ICS Mahesh PU Science College}{2021 -- 2023}
+{Karnataka State Pre-University Board -- 87.66\%}{Dharwad, Karnataka}
+\resumeSubheading
+{Shri Sharada Vidyaniketan School}{2020 -- 2021}
+{Karnataka Secondary Education Examination Board -- 87.36\%}{Vijayapura, Karnataka}
+\resumeSubHeadingListEnd
+\vspace{-6pt}
 
-\education
-{East Point College of Engineering and Technology}
-{2023 -- 2027}
-{B.E. in Electronics and Communication Engineering -- 7.8 CGPA}
-{Bangalore, Karnataka}
-
-\education
-{ICS Mahesh PU Science College}
-{2021 -- 2023}
-{Karnataka State Pre-University Board -- 87.66\%}
-{Dharwad, Karnataka}
-
-\education
-{Shri Sharada Vidyaniketan School}
-{2020 -- 2021}
-{Karnataka Secondary Education Examination Board -- 87.36\%}
-{Vijayapura, Karnataka}
-
-% ==================================================
-% TECHNICAL SKILLS
-% ==================================================
-
+%----------- SKILLS -----------
 \section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in,label={},itemsep=1pt]
+\small
+\item \textbf{Programming:} C/C++ (Arduino), Python (Raspberry Pi) -- basics
+\item \textbf{Microcontrollers \& Boards:} ESP32, Arduino UNO, Raspberry Pi 4B
+\item \textbf{Protocols:} I2C, SPI, UART, Bluetooth (HC-05), Wi-Fi
+\item \textbf{Sensors \& Modules:} IR, Ultrasonic (HC-SR04), Gas, Fire, TDS, pH, Turbidity, Temperature, SIM800L (GSM), L298N Motor Driver, Servo Motors
+\item \textbf{Software \& Tools:} Arduino IDE, Thonny, Blynk IoT, Cadence, Overleaf (\LaTeX)
+\item \textbf{ECE Tools:} Proteus, Tinkercad, Wokwi, MATLAB, Raspberry Pi OS [Linux Based OS], ChatGPT, Claude AI
+\end{itemize}
+\vspace{-6pt}
 
-\textbf{Programming:} C/C++ (Arduino), Python (Raspberry Pi)
--- basics\\
-\textbf{Microcontrollers and Boards:}
-ESP32, Arduino UNO, Raspberry Pi 4B\\
-\textbf{Communication Protocols:}
-I2C, SPI, UART, Bluetooth (HC-05), Wi-Fi\\
-\textbf{Sensors and Modules:}
-IR, Ultrasonic (HC-SR04), Gas, Fire, TDS, pH, Turbidity,
-Temperature, SIM800L (GSM), L298N Motor Driver, Servo Motors\\
-\textbf{Software and Tools:}
-Arduino IDE, Thonny, Blynk IoT, Cadence, Overleaf (LaTeX)\\
-\textbf{ECE Tools:}
-Proteus, Tinkercad, Wokwi, MATLAB, Raspberry Pi OS (Linux),
-ChatGPT, Claude AI
-
-% ==================================================
-% HANDS-ON EXPERIENCE
-% ==================================================
-
+%----------- HANDS-ON EXPERIENCE -----------
 \section{Hands-on Experience}
-
-\begin{itemize}
-    \resumeItem{\textbf{Raspberry Pi 4B:}
-    Camera interfacing, OCR-based text recognition, Excel data
-    storage, voice alerts, and communication with ESP32.}
-
-    \resumeItem{\textbf{ESP32:}
-    IoT monitoring with Blynk Cloud, Wi-Fi/Bluetooth communication,
-    mobile and email notifications, and servo control.}
-
-    \resumeItem{\textbf{Arduino UNO:}
-    Sensor interfacing, motor control using L298N, and
-    Bluetooth-controlled robotics.}
-
-    \resumeItem{\textbf{Hardware:}
-    Breadboard prototyping, soldering, multimeter-based testing
-    and debugging, and power regulation using buck converters.}
+\begin{itemize}[leftmargin=0.18in,noitemsep,topsep=2pt]
+\small
+\item \textbf{Raspberry Pi 4B:} Camera interfacing, OCR-based text recognition, Excel data storage, voice alerts, and communication with ESP32.
+\item \textbf{ESP32:} IoT monitoring with Blynk Cloud, Wi-Fi/Bluetooth communication, mobile and email notifications, servo control.
+\item \textbf{Arduino UNO:} Sensor interfacing, motor control using L298N, Bluetooth-controlled robotics.
+\item \textbf{Hardware:} Breadboard prototyping, soldering, multimeter-based testing and debugging, power regulation using buck converters.
 \end{itemize}
+\vspace{-6pt}
 
-% ==================================================
-% PROJECTS
-% ==================================================
-
+%----------- PROJECTS -----------
 \section{Projects}
+\resumeSubHeadingListStart
 
-\project
-{Sparsh-Vaani: Medicine Label Reader for Differently-Abled Patients}
-{Raspberry Pi, ESP32, OCR}
-{Built an assistive system that reads medicine labels using a
-camera and OCR, stores details in Excel, and controls a
-six-compartment pill dispenser through ESP32, with voice alerts,
-reminders, and IoT notifications.}
+\resumeProject{https://github.com/mathapatiappayya88-dm/Sparsh-Vaani-Multi-Sensory-Medicine-Label-Reader-for-Differently-Abled-Patients}
+{Sparsh-Vaani: Medicine Label Reader for Differently-Abled Patients}{Raspberry Pi, ESP32, OCR}
+\resumeItemListStart
+\item \small Built an assistive system that reads medicine labels using a camera and OCR, stores details in Excel, and controls a six-compartment pill dispenser through ESP32, with voice alerts, reminders, and IoT notifications.
+\resumeItemListEnd
 
-\project
-{Smart PillCare: IoT Medicine Dispenser for Elderly}
-{ESP32, Blynk IoT}
-{Developed an automatic dispenser with pre-alert reminders,
-pill dispensing, remaining-tablet count, Blynk app notifications,
-and email alerts to caregivers for missed doses; documented in
-an IEEE-format paper.}
+\resumeProject{https://github.com/mathapatiappayya88-dm/SMART-PILLCARE-IoT-Based-Automatic-Medicine-Dispenser-for-Elderly-People}
+{Smart PillCare: IoT Medicine Dispenser for Elderly}{ESP32, Blynk IoT}
+\resumeItemListStart
+\item \small Developed an automatic dispenser with pre-alert reminders, pill dispensing, remaining-tablet count, Blynk app notifications, and email alerts to caregivers for missed doses; documented in an IEEE-format paper.
+\resumeItemListEnd
 
-\project
-{AquaVision: Smart Water Quality Monitoring}
-{ESP32, Blynk Cloud}
-{Built an IoT system to monitor TDS, pH, turbidity, and
-temperature, measure water level using HC-SR04, and send
-mobile notifications and buzzer alerts.}
+\resumeProject{https://github.com/mathapatiappayya88-dm/AquaVision-Smart-Water-Quality-Monitoring-System}
+{AquaVision: Smart Water Quality Monitoring}{ESP32, Blynk Cloud}
+\resumeItemListStart
+\item \small Built an IoT system to monitor TDS, pH, turbidity, and temperature, measure water level using HC-SR04, and send mobile notifications and buzzer alerts.
+\resumeItemListEnd
 
-\project
-{Disaster Management Robot}
-{Arduino UNO, ESP32}
-{Designed a rescue robot with fire and gas detection, obstacle
-avoidance, Bluetooth control, IoT monitoring, and an automatic
-medicine dispenser; won first prize in an Embedded Systems
-Hackathon.}
+\resumeProject{https://github.com/mathapatiappayya88-dm/DISASTER-MANAGEMENT-ROBOT-}
+{Disaster Management Robot}{Arduino UNO, ESP32}
+\resumeItemListStart
+\item \small Designed a rescue robot with fire and gas detection, obstacle avoidance, Bluetooth control, IoT monitoring, and an automatic medicine dispenser; won 1\textsuperscript{st} prize in an Embedded Systems Hackathon.
+\resumeItemListEnd
 
-\project
-{Bluetooth-Controlled RC Car}
-{Arduino UNO, HC-05, L298N}
-{Built a four-motor car controlled from a smartphone app
-(forward, backward, left, right, and stop) using an HC-05 module
-and L298N motor driver.}
+\resumeProject{https://github.com/mathapatiappayya88-dm/BLUETOOTH-CONTROL-CAR}
+{Bluetooth-Controlled RC Car}{Arduino UNO, HC-05, L298N}
+\resumeItemListStart
+\item \small Built a four-motor car controlled from a smartphone app (forward, backward, left, right, stop) using an HC-05 module and L298N motor driver.
+\resumeItemListEnd
 
-\project
-{Automatic Street Light}
-{ESP32, IR Sensors}
-{Developed an automatic street light system for energy-efficient
-lighting and prepared an IEEE-format paper on it.}
+\resumeProject{https://github.com/mathapatiappayya88-dm}
+{Automatic Street Light}{Embedded System}
+\resumeItemListStart
+\item \small Developed an automatic street light system for energy-efficient lighting and prepared an IEEE-format paper on it. \textit{(ESP32 AND IR SENSORS.)}
+\resumeItemListEnd
 
-% ==================================================
-% LEADERSHIP AND ACTIVITIES
-% ==================================================
+\resumeSubHeadingListEnd
+\vspace{-6pt}
 
-\section{Leadership and Activities}
+%----------- LEADERSHIP -----------
+\section{Leadership \& Activities}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Class Representative (CR)}{2024 -- Present}
+{Dept. of ECE, East Point College of Engineering and Technology}{}
+\resumeItemListStart
+\item \small Coordinate communication between students and faculty and help resolve student concerns.
+\resumeItemListEnd
+\resumeSubheading
+{IEEE Student Member}{}
+{IEEE Student Branch}{}
+\resumeItemListStart
+\item \small Participated in IEEE Day celebrations, technical workshops, and seminars, and supported technical events.
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-6pt}
 
-\textbf{Class Representative (CR)}
-\hfill {\small 2024 -- Present}\\
-Department of ECE, East Point College of Engineering and
-Technology
-\begin{itemize}
-    \resumeItem{Coordinate communication between students and
-    faculty and help resolve student concerns.}
-\end{itemize}
-
-\textbf{IEEE Student Member}\\
-IEEE Student Branch
-\begin{itemize}
-    \resumeItem{Participated in IEEE Day celebrations, technical
-    workshops, and seminars, and supported technical events.}
-\end{itemize}
-
-% ==================================================
-% ACHIEVEMENTS
-% ==================================================
-
+%----------- ACHIEVEMENTS -----------
 \section{Achievements}
-
-\begin{itemize}
-    \resumeItem{Participated in a National-Level Hackathon
-    (Smart Health Care and Personal Safety domain).}
-
-    \resumeItem{First Prize Winner in an Embedded Systems Hackathon.}
-
-    \resumeItem{First Prize in the Digital Electronics Quiz
-    Competition by Maven Silicon during the VLSI Workshop.}
-
-    \resumeItem{Attended technical workshops and visited
-    exhibitions at KTPO, Whitefield, Bangalore.}
+\begin{itemize}[leftmargin=0.18in,noitemsep,topsep=2pt]
+\small
+\item Participated in a National Level Hackathon (Smart Health Care and Personal Safety domain).
+\item 1\textsuperscript{st} Prize Winner in an Embedded Systems Hackathon.
+\item 1\textsuperscript{st} Prize in the Digital Electronics Quiz Competition by Maven Silicon during the VLSI Workshop.
+\item Attended technical workshops and visited exhibitions at KTPO, Whitefield, Bangalore.
 \end{itemize}
+\vspace{-6pt}
 
-% ==================================================
-% DECLARATION
-% ==================================================
-
+%----------- DECLARATION -----------
 \section{Declaration}
+\small{I hereby declare that the information provided above is true and correct to the best of my knowledge and belief.}
 
-I hereby declare that the information provided above is true
-and correct to the best of my knowledge and belief.
-
-\vspace{5pt}
-\textbf{Place:} Bangalore
-\hfill
-\textbf{Darshan Mathapati}
+\vspace{8pt}
+\noindent Place: Bangalore \hfill \textbf{Darshan Mathapati}
 
 \end{document}
