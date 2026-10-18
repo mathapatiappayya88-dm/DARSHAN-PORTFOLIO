@@ -1,0 +1,40 @@
+name: Build and Publish Resume
+
+on:
+  push:
+    paths:
+      - "resume-latex/**"
+      - ".github/workflows/build-resume.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-resume:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX resume
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: main.tex
+          working_directory: resume-latex
+
+      - name: Publish resume PDF
+        run: cp resume-latex/main.pdf resume.pdf
+
+      - name: Commit updated PDF
+        run: |
+          if ! git diff --quiet -- resume.pdf; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add resume.pdf
+            git commit -m "Automatically update resume PDF"
+            git push
+          else
+            echo "Resume PDF has not changed."
+          fi

@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <meta name="description"
+        content="Portfolio of Darshan Mathapati, ECE student building embedded systems, IoT, robotics and hardware projects.">
+
+  <meta name="theme-color" content="#0b1020">
+
+  <title>Darshan Mathapati | ECE Student & Embedded Engineer</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Resume section */
+
+    .resume-section {
+      scroll-margin-top: 90px;
+    }
+
+    .resume-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .resume-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .resume-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .resume-frame {
+      width: 100%;
+      height: 800px;
+      max-height: 85vh;
+      min-height: 500px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--card);
+    }
+
+    .resume-note {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: 12px 0 20px;
+    }
+
+    .resume-fallback {
+      text-align: center;
+      padding: 20px;
+      margin-top: 15px;
+    }
+
+    .resume-fallback a {
+      margin: 5px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    section {
+      scroll-margin-top: 85px;
+    }
+
+    .loading {
+      color: var(--muted);
+    }
+
+    @media (max-width: 600px) {
+      .resume-frame {
+        height: 65vh;
+        min-height: 400px;
+      }
+
+      .resume-toolbar {
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= NAVIGATION ================= -->
+
+  <nav class="navbar">
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="navLinks">
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+    <div class="links" id="navLinks">
+
+      <a href="#about">About</a>
+
+      <a href="#experience">Hands-on Experience</a>
+
+      <a href="#skills">Skills</a>
+
+      <a href="#projects">Projects</a>
+
+      <a href="#leadership">Leadership</a>
+
+      <a href="#education">Education</a>
+
+      <a href="#resume">Resume</a>
+
+      <a href="#contact">Contact</a>
+
+      <button
+        id="themeToggle"
+        class="theme-toggle"
+        aria-label="Toggle theme">
+        ◐
+      </button>
+
+    </div>
+
+  </nav>
+
+
+  <main>
+
+    <!-- ================= HOME ================= -->
+
+    <section class="hero" id="home">
+
+      <div class="hero-copy">
+
+        <p class="welcome">
+          WELCOME TO MY PORTFOLIO
+        </p>
+
+        <div class="badges">
+
+          <span class="badge">
+            IEEE MEMBER
+          </span>
+
+          <span class="badge">
+            HACKATHON WINNER
+          </span>
+
+          <span class="badge">
+            NATIONAL-LEVEL HACKATHON PARTICIPANT
+          </span>
+
+        </div>
+
+        <h1>
+          Hi, I'm
+          <span>Darshan Mathapati</span>
+        </h1>
+
+        <div class="role">
+          Electronics &amp; Communication Engineering Student
+          · Embedded Systems
+        </div>
+
+        <p>
+          I design and build IoT, embedded and robotics projects
+          that solve real problems in healthcare, safety and the
+          environment.
+        </p>
+
+        <div class="hero-actions">
+
+          <a class="btn" href="#projects">
+            View Projects
+          </a>
+
+          <a class="btn outline" href="#resume">
+            View Resume
+          </a>
+
+          <a
+            class="btn outline"
+            href="https://www.linkedin.com/in/darshan-mathapati-0384792a6"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            LinkedIn ↗
+
+          </a>
+
+        </div>
+
+      </div>
+
+      <img
+        class="photo"
+        src="photo.jpg"
+        alt="Portrait of Darshan Mathapati">
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+
+      <p class="eyebrow">
+        Get to know me
+      </p>
+
+      <h2>About Me</h2>
+
+      <div class="card">
+
+        <p>
+          I'm an Electronics and Communication Engineering student
+          who enjoys turning ideas into working hardware. I like
+          building complete systems, from circuit design and
+          soldering to programming microcontrollers and
+          single-board computers. I am an IEEE member, a hackathon
+          winner, a class representative and a project team lead.
+        </p>
+
+        <div class="stats">
+
+          <div>
+            <strong>IEEE</strong>
+            <span>Member</span>
+          </div>
+
+          <div>
+            <strong>Winner</strong>
+            <span>Hackathon</span>
+          </div>
+
+          <div>
+            <strong>National Level</strong>
+            <span>Hackathon Participant</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= EXPERIENCE ================= -->
+
+    <section id="experience">
+
+      <p class="eyebrow">
+        Learning by building
+      </p>
+
+      <h2>Hands-on Experience</h2>
+
+      <div class="grid">
+
+        <article class="card">
+
+          <h3>Embedded Systems</h3>
+
+          <p>
+            Building and testing microcontroller-based systems
+            using ESP32, ESP8266, Arduino and Raspberry Pi.
+          </p>
+
+        </article>
+
+        <article class="card">
+
+          <h3>IoT Prototyping</h3>
+
+          <p>
+            Connecting sensors, displays and actuators to IoT
+            dashboards and notifications for real-world monitoring.
+          </p>
+
+        </article>
+
+        <article class="card">
+
+          <h3>Circuit Assembly &amp; Debugging</h3>
+
+          <p>
+            Hands-on wiring, soldering, component testing,
+            power-supply checks and troubleshooting electronic
+            prototypes.
+          </p>
+
+        </article>
+
+        <article class="card">
+
+          <h3>Robotics</h3>
+
+          <p>
+            Integrating motors, motor drivers, sensors and
+            wireless control for mobile robot prototypes.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <section id="skills">
+
+      <p class="eyebrow">
+        What I work with
+      </p>
+
+      <h2>Skills</h2>
+
+      <div class="grid">
+
+        <article class="card">
+
+          <h3>Programming</h3>
+
+          <div class="tags">
+
+            <span>Python</span>
+            <span>Embedded C</span>
+            <span>IoT</span>
+
+          </div>
+
+        </article>
+
+        <article class="card">
+
+          <h3>Development &amp; Design Tools</h3>
+
+          <div class="tags">
+
+            <span>Git &amp; GitHub</span>
+            <span>LaTeX</span>
+            <span>Cadence</span>
+            <span>Wokwi</span>
+            <span>KiCad</span>
+            <span>Arduino IDE</span>
+
+          </div>
+
+        </article>
+
+        <article class="card">
+
+          <h3>Hardware &amp; Prototyping</h3>
+
+          <div class="tags">
+
+            <span>Raspberry Pi</span>
+            <span>ESP32</span>
+            <span>Arduino UNO</span>
+            <span>Circuit Design</span>
+            <span>Soldering</span>
+            <span>Multimeter</span>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects">
+
+      <p class="eyebrow">
+        Selected work
+      </p>
+
+      <h2>Featured Projects</h2>
+
+      <div class="grid" id="repos">
+
+        <p class="loading">
+          Loading projects from GitHub…
+        </p>
+
+      </div>
+
+      <div style="margin-top: 25px;">
+
+        <a
+          class="btn outline"
+          href="https://github.com/mathapatiappayya88-dm"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          View All GitHub Projects ↗
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= LEADERSHIP ================= -->
+
+    <section id="leadership">
+
+      <p class="eyebrow">
+        Beyond the lab
+      </p>
+
+      <h2>Leadership &amp; Involvement</h2>
+
+      <div class="grid">
+
+        <article class="card">
+
+          <span class="ic">🎓</span>
+
+          <h3>IEEE Member</h3>
+
+          <p>
+            Active member of the IEEE student community.
+          </p>
+
+        </article>
+
+        <article class="card">
+
+          <span class="ic">🏆</span>
+
+          <h3>Hackathon Winner</h3>
+
+          <p>
+            Won first prize in an embedded systems hackathon.
+          </p>
+
+        </article>
+
+        <article class="card">
+
+          <span class="ic">🚀</span>
+
+          <h3>National-Level Hackathon Participant</h3>
+
+          <p>
+            Participated in a national-level hackathon,
+            collaborating to develop and present a technical solution.
+          </p>
+
+        </article>
+
+        <article class="card">
+
+          <span class="ic">🧑‍🏫</span>
+
+          <h3>Class Representative &amp; Team Lead</h3>
+
+          <p>
+            Support class communication and coordinate project
+            tasks from idea to prototype.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= EDUCATION ================= -->
+
+    <section id="education">
+
+      <p class="eyebrow">
+        My learning journey
+      </p>
+
+      <h2>Education</h2>
+
+      <div class="card edu">
+
+        <h3>Bachelor of Engineering (BE)</h3>
+
+        <p class="accent-text">
+          Electronics and Communication Engineering
+        </p>
+
+        <p>
+          East Point College of Engineering and Technology
+        </p>
+
+        <div class="tags">
+
+          <span>Currently Pursuing</span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= RESUME ================= -->
+
+    <section id="resume" class="resume-section">
+
+      <p class="eyebrow">
+        My professional profile
+      </p>
+
+      <h2>My Resume</h2>
+
+      <div class="card resume-container">
+
+        <div class="resume-toolbar">
+
+          <div>
+
+            <h3>Darshan Mathapati — Resume</h3>
+
+            <p class="resume-note">
+              View or download my latest resume.
+            </p>
+
+          </div>
+
+          <div class="resume-actions">
+
+            <a
+              class="btn"
+              id="downloadResume"
+              href="resume.pdf"
+              download="Darshan_Mathapati_Resume.pdf">
+
+              Download PDF ↓
+
+            </a>
+
+            <a
+              class="btn outline"
+              id="openResume"
+              href="resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              Open in New Tab ↗
+
+            </a>
+
+          </div>
+
+        </div>
+
+        <iframe
+          class="resume-frame"
+          id="resumeFrame"
+          title="Darshan Mathapati Resume PDF"
+          loading="lazy">
+
+        </iframe>
+
+        <p class="resume-note">
+          If the PDF does not appear in the viewer, use
+          the Download PDF or Open in New Tab button.
+        </p>
+
+        <div class="resume-fallback">
+
+          <a
+            class="btn outline"
+            href="resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            View Resume PDF
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="contact">
+
+      <p class="eyebrow">
+        Have an opportunity?
+      </p>
+
+      <h2>
+        Let's build something great.
+      </h2>
+
+      <p>
+        Open to internships and embedded systems or IoT
+        opportunities. Let's connect about projects, learning
+        and collaboration.
+      </p>
+
+      <div id="emailDisplay"></div>
+
+      <button class="btn" id="showEmail">
+        Show Email
+      </button>
+
+      <button class="btn outline" id="copyEmail" hidden>
+        Copy Email
+      </button>
+
+      <a
+        class="btn outline"
+        href="https://www.linkedin.com/in/darshan-mathapati-0384792a6"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        LinkedIn ↗
+
+      </a>
+
+      <a
+        class="btn outline"
+        href="https://github.com/mathapatiappayya88-dm"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        GitHub ↗
+
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    © <span id="year"></span>
+    Darshan Mathapati · ECE Student
+
+  </footer>
+
+
+  <!-- ================= SCRIPTS ================= -->
+
+  <script src="script.js"></script>
+
+  <script>
+    // Automatically update the footer year.
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    // Load the resume PDF.
+    // The timestamp helps prevent outdated cached PDFs.
+    const pdfUrl = "resume.pdf?v=" + Date.now();
+
+    const resumeFrame = document.getElementById("resumeFrame");
+    const downloadResume = document.getElementById("downloadResume");
+    const openResume = document.getElementById("openResume");
+
+    resumeFrame.src = pdfUrl + "#view=FitH";
+
+    downloadResume.href = pdfUrl;
+
+    openResume.href = pdfUrl;
+
+
+    // Smooth navigation for internal links.
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+      link.addEventListener("click", function (event) {
+
+        const targetId = this.getAttribute("href");
+
+        if (!targetId || targetId === "#") {
+          return;
+        }
+
+        const target = document.querySelector(targetId);
+
+        if (target) {
+
+          event.preventDefault();
+
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+
+          history.replaceState(null, "", targetId);
+
+        }
+
+      });
+
+    });
+
+  </script>
+
+</body>
+
+</html>
