@@ -1,0 +1,247 @@
+\documentclass[a4paper,10pt]{article}
+
+% ---------- PACKAGES ----------
+\usepackage[margin=0.55in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{array}
+
+% ---------- PAGE SETTINGS ----------
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\parskip}{2pt}
+
+% ---------- COLORS ----------
+\definecolor{heading}{RGB}{20,55,90}
+\definecolor{linecolor}{RGB}{90,110,130}
+
+% ---------- SECTION STYLE ----------
+\titleformat{\section}
+  {\large\bfseries\color{heading}}
+  {}{0em}{}
+  [\color{linecolor}\titlerule]
+
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+% ---------- CUSTOM COMMANDS ----------
+\newcommand{\resumeItem}[1]{
+  \item \small{#1}
+}
+
+\newcommand{\resumeProject}[2]{
+  \textbf{#1} \hfill {\small\textit{#2}}\\[-2pt]
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \textbf{#1} \hfill {\small #2}\\
+  \textit{\small #3} \hfill {\small #4}
+}
+
+\setlist[itemize]{
+  leftmargin=15pt,
+  itemsep=2pt,
+  topsep=2pt,
+  parsep=0pt
+}
+
+% ---------- DOCUMENT ----------
+\begin{document}
+
+% ---------- HEADER ----------
+\begin{center}
+    {\LARGE\bfseries\color{heading} DARSHAN M ATHAPATI}\\[3pt]
+    {\large Embedded Engineer}\\[6pt]
+
+    \small
+    +91-8660768219
+    \quad $|$ \quad
+    \href{mailto:mathapati88@gmail.com}
+    {mathapati88@gmail.com}
+    \quad $|$ \quad
+    \href{https://www.linkedin.com/}
+    {LinkedIn}
+    \quad $|$ \quad
+    \href{https://github.com/}
+    {GitHub}\\[3pt]
+    IEEE Student Member
+\end{center}
+
+% ---------- CAREER OBJECTIVE ----------
+\section{Career Objective}
+
+Electronics and Communication Engineering student with hands-on
+experience in embedded systems and IoT using ESP32, Raspberry Pi,
+and Arduino UNO. Skilled in sensor interfacing, cloud-connected
+monitoring, and hardware prototyping. Seeking an embedded engineering
+opportunity to build practical, real-world solutions while continuing
+to learn.
+
+% ---------- EDUCATION ----------
+\section{Education}
+
+\resumeSubheading
+{East Point College of Engineering and Technology}
+{2023--2027}
+{B.E. in Electronics and Communication Engineering -- 7.8 CGPA}
+{Bangalore, Karnataka}
+
+\resumeSubheading
+{ICS Mahesh PU Science College}
+{2021--2023}
+{Karnataka State Pre-University Board -- 87.66\%}
+{Dharwad, Karnataka}
+
+\resumeSubheading
+{Shri Sharada Vidyaniketan School}
+{2020--2021}
+{Karnataka Secondary Education Examination Board -- 87.36\%}
+{Vijayapura, Karnataka}
+
+% ---------- TECHNICAL SKILLS ----------
+\section{Technical Skills}
+
+\small
+\textbf{Programming:} C/C++ (Arduino), Python (Raspberry Pi) -- basics\\
+\textbf{Microcontrollers and Boards:} ESP32, Arduino UNO, Raspberry Pi 4B\\
+\textbf{Protocols:} I2C, SPI, UART, Bluetooth (HC-05), Wi-Fi\\
+\textbf{Sensors and Modules:} IR, Ultrasonic (HC-SR04), Gas, Fire, TDS,
+pH, Turbidity, Temperature, SIM800L (GSM), L298N Motor Driver, Servo Motors\\
+\textbf{Software and Tools:} Arduino IDE, Thonny, Blynk IoT, Cadence,
+Overleaf (LaTeX)\\
+\textbf{ECE Tools:} Proteus, Tinkercad, Wokwi, MATLAB,
+Raspberry Pi OS (Linux), ChatGPT, Claude AI
+
+% ---------- HANDS-ON EXPERIENCE ----------
+\section{Hands-on Experience}
+
+\begin{itemize}
+    \resumeItem{\textbf{Raspberry Pi 4B:}
+    Camera interfacing, OCR-based text recognition, Excel data storage,
+    voice alerts, and communication with ESP32.}
+
+    \resumeItem{\textbf{ESP32:}
+    IoT monitoring with Blynk Cloud, Wi-Fi/Bluetooth communication,
+    mobile and email notifications, and servo control.}
+
+    \resumeItem{\textbf{Arduino UNO:}
+    Sensor interfacing, motor control using L298N, and
+    Bluetooth-controlled robotics.}
+
+    \resumeItem{\textbf{Hardware:}
+    Breadboard prototyping, soldering, multimeter-based testing
+    and debugging, and power regulation using buck converters.}
+\end{itemize}
+
+% ---------- PROJECTS ----------
+\section{Projects}
+
+\resumeProject
+{Sparsh-Vaani: Medicine Label Reader for Differently-Abled Patients}
+{Raspberry Pi, ESP32, OCR}
+\begin{itemize}
+    \resumeItem{Built an assistive system that reads medicine labels using
+    a camera and OCR, stores details in Excel, and controls a
+    six-compartment pill dispenser through ESP32, with voice alerts,
+    reminders, and IoT notifications.}
+\end{itemize}
+
+\resumeProject
+{Smart PillCare: IoT Medicine Dispenser for Elderly}
+{ESP32, Blynk IoT}
+\begin{itemize}
+    \resumeItem{Developed an automatic dispenser with pre-alert reminders,
+    pill dispensing, remaining-tablet count, Blynk app notifications,
+    and email alerts to caregivers for missed doses; documented in
+    an IEEE-format paper.}
+\end{itemize}
+
+\resumeProject
+{AquaVision: Smart Water Quality Monitoring}
+{ESP32, Blynk Cloud}
+\begin{itemize}
+    \resumeItem{Built an IoT system to monitor TDS, pH, turbidity, and
+    temperature, measure water level using HC-SR04, and send
+    mobile notifications and buzzer alerts.}
+\end{itemize}
+
+\resumeProject
+{Disaster Management Robot}
+{Arduino UNO, ESP32}
+\begin{itemize}
+    \resumeItem{Designed a rescue robot with fire and gas detection,
+    obstacle avoidance, Bluetooth control, IoT monitoring, and an
+    automatic medicine dispenser; won first prize in an
+    Embedded Systems Hackathon.}
+\end{itemize}
+
+\resumeProject
+{Bluetooth-Controlled RC Car}
+{Arduino UNO, HC-05, L298N}
+\begin{itemize}
+    \resumeItem{Built a four-motor car controlled from a smartphone app
+    with forward, backward, left, right, and stop commands using
+    an HC-05 module and L298N motor driver.}
+\end{itemize}
+
+\resumeProject
+{Automatic Street Light}
+{ESP32, IR Sensors}
+\begin{itemize}
+    \resumeItem{Developed an automatic street light system for
+    energy-efficient lighting and prepared an IEEE-format paper.}
+\end{itemize}
+
+% ---------- LEADERSHIP ----------
+\section{Leadership and Activities}
+
+\textbf{Class Representative (CR)}
+\hfill {\small 2024--Present}\\
+\textit{\small Department of ECE, East Point College of Engineering
+and Technology}
+\begin{itemize}
+    \resumeItem{Coordinate communication between students and faculty
+    and help resolve student concerns.}
+\end{itemize}
+
+\textbf{IEEE Student Member}\\
+\textit{\small IEEE Student Branch}
+\begin{itemize}
+    \resumeItem{Participated in IEEE Day celebrations, technical
+    workshops, and seminars, and supported technical events.}
+\end{itemize}
+
+% ---------- ACHIEVEMENTS ----------
+\section{Achievements}
+
+\begin{itemize}
+    \resumeItem{Participated in a National Level Hackathon in the
+    Smart Health Care and Personal Safety domain.}
+
+    \resumeItem{Won first prize in an Embedded Systems Hackathon.}
+
+    \resumeItem{Won first prize in the Digital Electronics Quiz
+    Competition by Maven Silicon during the VLSI Workshop.}
+
+    \resumeItem{Attended technical workshops and visited exhibitions
+    at KTPO, Whitefield, Bangalore.}
+\end{itemize}
+
+% ---------- DECLARATION ----------
+\section{Declaration}
+
+I hereby declare that the information provided above is true and
+correct to the best of my knowledge and belief.
+
+\vspace{5pt}
+
+\begin{tabularx}{\textwidth}{X r}
+Place: Bangalore & \textbf{Darshan Mathapati}
+\end{tabularx}
+
+\end{document}
